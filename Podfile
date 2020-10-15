@@ -47,4 +47,7 @@ post_install do |installer|
       end
     end
   end
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER'] = 'NO'
+  end
 end
